@@ -1,0 +1,24 @@
+<div class="app-section mat-app-background" >
+	<h1 class="section-title">
+
+    <div style="width: 100%;display: flex;justify-items: stretch;">
+      {{title}}
+    </div>
+
+
+  </h1>
+
+  <div *ngIf="icon!=''">
+    <mat-icon style="font-size: 60px;width:100px;height:100px;">{{icon}}</mat-icon>
+  </div>
+
+
+  <div *ngIf="subtitle!=''" class="mat-headline-4"  style="margin-top: -30px;width: 80%;text-align: center;display: inline-block;">
+		  {{subtitle}}
+  </div>
+
+  <br><br>
+
+	<ng-content class="section-body"></ng-content>
+	<br>
+</div>

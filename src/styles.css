@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; background-color: black; color: white; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.section-title {
+  font-family: "Courier New", serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 50px;
+  display: inline-block;
+  position:relative;
+  width:fit-content;
+  max-width: 80%;
+  color:#00fd00;
+}
+
+.img-icon {
+  height: 100px;
+  width: 100px;
+}
+
+.bloc-icon {
+  font-size: 60px;
+  height: 100px;
+  width: 100px;
+  color: #00fd00;
+}
+
+.bloc-title {
+  font-size: x-large;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.section-body {
+  color: white;
+  font-size: large;
+}

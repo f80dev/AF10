@@ -1,0 +1,21 @@
+<h2>{{product!.title}}</h2>
+
+<img *ngIf="product && product.visual && product.visual.length>0"
+     [src]="product!.visual"
+     style="width: 80%;max-width: 500px">
+<br>
+<br>
+
+<mat-label>
+  {{product!.description}}
+</mat-label>
+
+<br><br>
+
+<button mat-raised-button
+        *ngIf="product!.link"
+        (click)="open_product()">Utiliser</button>
+
+<br><br>
+<button mat-raised-button
+        (click)="close_product()">Fermer</button>

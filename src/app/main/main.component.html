@@ -1,0 +1,24 @@
+<div style="width: 100%;text-align: center;">
+ <img src="logo_noir.png" *ngIf="!sel_product">
+  <br>
+
+  <app-section title="Prestation" *ngIf="!sel_product">
+   Direction de projet<br>
+   Stratégie Digital<br>
+   Conduite du changement<br>
+   Pilotage d'équipe<br>
+   Développement
+ </app-section>
+
+  <app-section title="Réalisations" *ngIf="!sel_product">
+   <app-reversebloc *ngFor="let prod of products"
+                    (onshowmore)="open_product(prod)"
+                    [title]="prod.title" [icon]="prod.icon">
+     {{prod.description}}
+   </app-reversebloc>
+ </app-section>
+
+
+  <app-product [product]="sel_product"
+               (onclose)="sel_product=null"></app-product>
+</div>
