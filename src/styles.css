@@ -1,39 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; background-color: black; color: white; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background-color: black;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.remove-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: auto; /* Make sure scrolling still works */
+}
+
+.zone-product {
+  margin:40px;
+  width:200px;
+  display:inline-block;
+  text-align: center;
+  cursor: url(https://af10.fr/pacman.png) auto;
+}
+
+
+
+.zone-contact {
+  display:inline-block;
+  width:50px;
+  height: 50px;
+}
+
+.screen {
+  position: fixed;
+  display: block;
+  z-index: 0;
+  left:0;
+  opacity: 0.5;
+  width:100vw;
+  height:100vh;
+  top:0;
+  pointer-events: none;
+}
+
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .section-title {
-  font-family: "Courier New", serif;
   text-transform: uppercase;
   font-weight: lighter;
-  font-size: 50px;
+  font-size: 30px;
+  letter-spacing: 5px;
   display: inline-block;
-  position:relative;
   width:fit-content;
   max-width: 80%;
+  text-shadow: 0 0 4px #00fd00;
   color:#00fd00;
 }
 
+
+
 .img-icon {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
+  opacity: 0.8;
 }
 
-.bloc-icon {
-  font-size: 60px;
-  height: 100px;
-  width: 100px;
-  color: #00fd00;
-}
 
-.bloc-title {
-  font-size: x-large;
-  text-transform: uppercase;
+.clignotant-opacity {
   display: inline-block;
+  width: 15px;
+  height: 25px;
+  background-color: #00fd00; /* Choisis la couleur que tu veux */
+  margin-top: 3px;
+  margin-left: 5px;
+  animation: clignoter-opacite 1s infinite alternate;
 }
+
+@keyframes clignoter-opacite {
+  from { opacity: 1; } /* Complètement visible */
+  to { opacity: 0; }   /* Complètement invisible */
+}
+
 
 .section-body {
   color: white;
-  font-size: large;
+  text-shadow: 0 0 10px white;
+  font-weight: lighter;
+  line-height: 190%;
+  letter-spacing: 3px;
 }

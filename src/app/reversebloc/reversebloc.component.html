@@ -3,9 +3,10 @@
      (mouseleave)="on_reverse(false)">
   <div class="flip-card-inner" [style.border-color]="border_color">
     <div class="flip-card-front" [style]="style">
-      <div style="display: block;position: absolute;left: 20px;top:20px;z-index: 1;"
+      <img src="disquette.png" class="image-front-card">
+      <div style="display: block;position: absolute;left: 50px;top:160px;z-index: 1;"
            *ngIf="title!=''" class="mat-headline-4">
-        <div  *ngIf="icon.length>0">
+        <div *ngIf="icon.length>0">
           <mat-icon class="bloc-icon" *ngIf="icon.indexOf('/')==-1">{{icon}}</mat-icon>
           <img alt='logo of the appli' class="img-icon" *ngIf="icon.indexOf('/')>-1" [src]="icon"/>
         </div>

@@ -1,24 +1,54 @@
-<div style="width: 100%;text-align: center;">
- <img src="logo_noir.png" *ngIf="!sel_product">
+<img src="https://wc.wallpaperuse.com/wallp/25-251694_s.png" class="screen">
+
+<div style="display:block;position:fixed;z-index:1;top:0;left:0;text-align: center;width:100vw;height: 100vh;" class="remove-scrollbar">
   <br>
 
-  <app-section title="Prestation" *ngIf="!sel_product">
-   Direction de projet<br>
-   Stratégie Digital<br>
-   Conduite du changement<br>
-   Pilotage d'équipe<br>
-   Développement
+  <img style="margin-top: 25vh;margin-bottom: 10vh;width:50vw;max-width: 350px;opacity: 0.8;"
+       src="logo_vert.png" *ngIf="!sel_product">
+  <br>
+
+
+  <app-section title="Accompagnement" *ngIf="!sel_product">
+   <br><br>
+    <div class="section-body">
+     Direction de projets<br>
+     Stratégie Digitale<br>
+     Conduite du changement<br>
+     Conception & développement Logiciel
+   </div>
  </app-section>
 
-  <app-section title="Réalisations" *ngIf="!sel_product">
-   <app-reversebloc *ngFor="let prod of products"
-                    (onshowmore)="open_product(prod)"
-                    [title]="prod.title" [icon]="prod.icon">
-     {{prod.description}}
-   </app-reversebloc>
- </app-section>
+    <app-section title="Réalisations" *ngIf="!sel_product">
+      <br><br><br>
+     <div *ngFor="let prod of products" class="zone-product">
+       <img [src]="prod.icon" class="img-icon">
+       <br><br>
+       {{prod.title}}
+     </div>
+   </app-section>
 
+<!--  <app-section title="Réalisations" *ngIf="!sel_product">-->
+<!--    <br><br><br>-->
+<!--   <app-reversebloc *ngFor="let prod of products"-->
+<!--                    style="margin:40px;"-->
+<!--                    (onshowmore)="open_product(prod)"-->
+<!--                    [title]="prod.title" [icon]="prod.icon">-->
+<!--     {{prod.description}}-->
+<!--   </app-reversebloc>-->
+<!-- </app-section>-->
 
-  <app-product [product]="sel_product"
-               (onclose)="sel_product=null"></app-product>
+<!--  <app-product [product]="sel_product"-->
+<!--               (onclose)="sel_product=null"></app-product>-->
+
+    <app-section title="Contacts">
+      <br>
+      <div *ngFor="let contact of contacts" class="zone-contact">
+        <a [href]="contact.link" style="color:white;" target="contact">
+          <mat-icon [title]="contact.title"
+                    style="font-size: x-large;">
+            {{contact.icon}}
+          </mat-icon>
+        </a>
+      </div>
+    </app-section>
 </div>
