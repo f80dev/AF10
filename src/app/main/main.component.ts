@@ -68,7 +68,7 @@ export class MainComponent implements OnInit {
       description: "Capturer les images d'un site web et les transformer en NFT en quelques clics",
       visual: "https://",
       icon:"./pacman_red.png",
-      link:"",
+      link:"https://is.af10.fr",
       support:""
     },
     {
@@ -77,7 +77,7 @@ export class MainComponent implements OnInit {
       version: "1.0",
       icon:"./pacman_blue.png",
       description: "Fabriquer des NFT en quelques clics sur MultiversX",
-      visual: "https://",
+      visual: "",
       link: "https://nftnow.af10.fr",
       support: ""
     },
@@ -104,6 +104,7 @@ export class MainComponent implements OnInit {
     ]
 
   open_product(product:any) {
-    this.sel_product=product
+    //this.sel_product=product
+    open(product.link,"Product")
   }
 }

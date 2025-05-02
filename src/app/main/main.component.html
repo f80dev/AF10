@@ -20,7 +20,7 @@
 
     <app-section title="Réalisations" *ngIf="!sel_product">
       <br><br><br>
-     <div *ngFor="let prod of products" class="zone-product">
+     <div *ngFor="let prod of products" class="zone-product" (click)="open_product(prod)">
        <img [src]="prod.icon" class="img-icon">
        <br><br>
        {{prod.title}}
