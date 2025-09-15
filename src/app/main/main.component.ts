@@ -6,6 +6,7 @@ import {ProductComponent} from '../product/product.component';
 import {getParams} from '../tools';
 import {ActivatedRoute} from '@angular/router';
 import {MatIcon} from '@angular/material/icon';
+import {FxkeyboardComponent} from '../fxkeyboard/fxkeyboard.component';
 
 @Component({
   selector: 'app-main',
@@ -15,20 +16,24 @@ import {MatIcon} from '@angular/material/icon';
     NgIf,
     NgForOf,
     ProductComponent,
-    MatIcon
+    MatIcon,
+    FxkeyboardComponent
   ],
   templateUrl: './main.component.html',
   standalone: true,
   styleUrl: './main.component.css'
 })
 export class MainComponent implements OnInit {
-  routes=inject(ActivatedRoute)
+  routes = inject(ActivatedRoute)
+  top = "0px"
+  left="0px"
+  description=""
 
-  async ngOnInit()  {
-    let params:any=await getParams(this.routes)
-    if(params.appli){
-      for(let p of this.products){
-        if(p.id==params.appli){
+  async ngOnInit() {
+    let params: any = await getParams(this.routes)
+    if (params.appli) {
+      for (let p of this.products) {
+        if (p.id == params.appli) {
           this.open_product(p)
         }
       }
@@ -36,75 +41,96 @@ export class MainComponent implements OnInit {
   }
 
 
-  sel_product:any=undefined
-  contacts:any[]=[
+  sel_product: any = undefined
+  contacts: any[] = [
     {
-      title:"X",
-      icon:"tag",
-      link:"https://x.com/AF1050273163669",
+      title: "X",
+      icon: "tag",
+      link: "https://x.com/AF1050273163669",
     },
     {
-      title:"Telegram",
-      icon:"call",
-      link:"https://t.me/af10_official",
+      title: "Telegram",
+      icon: "call",
+      link: "https://t.me/af10_official",
     },
     {
-      title:"Youtube",
-      icon:"videocam",
-      link:"https://www.youtube.com/@AF10-o1y",
+      title: "Youtube",
+      icon: "videocam",
+      link: "https://www.youtube.com/@AF10-o1y",
     },
     {
-      title:"Email",
-      icon:"email",
-      link:"mailto:contact@af10.fr",
+      title: "Email",
+      icon: "email",
+      link: "mailto:contact@af10.fr",
     }
-    ]
+  ]
 
-    products:any[]=[
+
+  products: any[] = [
     {
       id: "is",
-      title:"Image Scraper",
+      title: "Image Scraper",
       version: "1.0",
       description: "Capturer les images d'un site web et les transformer en NFT en quelques clics",
       visual: "https://",
-      icon:"./pacman_red.png",
-      link:"https://is.af10.fr",
-      support:""
+      icon: "./pacman_red.png",
+      link: "https://chromewebstore.google.com/category/extensions",
+      support: ""
     },
     {
-      id:"nftnow",
+      id: "nftnow",
       title: "NFT Now",
       version: "1.0",
-      icon:"./pacman_blue.png",
+      icon: "./pacman_blue.png",
       description: "Fabriquer des NFT en quelques clics sur MultiversX",
       visual: "",
       link: "https://nftnow.af10.fr",
       support: ""
     },
     {
-      id:"tokemon",
+      id: "tokemon",
       title: "Tokemon",
       version: "1.0",
-      icon:"./pacman_pink.png",
+      icon: "./pacman_pink.png",
       description: "Capturer des NFT cachés sur une carte",
       visual: "https://",
       link: "https://tokemon.af10.fr",
       support: ""
     },
     {
-      id:"secretvault",
+      id: "secretvault",
       title: "Instant Vault",
       version: "1.0",
-      icon:"./pacman_orange.png",
+      icon: "./pacman_orange.png",
       description: "Transférer des NFTs et des coins",
       visual: "https://",
       link: "https://secretvault.af10.fr",
       support: ""
     }
-    ]
+  ]
 
-  open_product(product:any) {
+
+  open_product(product: any) {
     //this.sel_product=product
-    open(product.link,"Product")
+    open(product.link, "Product")
   }
+
+
+  show_popup(prod: any, $event: any) {
+    this.description=prod.description
+    if($event.hasOwnProperty("clientX")){
+      this.top=($event.clientY-150)+"px"
+      this.left=($event.clientX+20)+"px"
+    }else{
+      this.top=($event.clientY-150)+"px"
+      this.left=($event.clientX+20)+"px"
+    }
+
+  }
+
+
+  hide_popup() {
+    this.description=""
+  }
+
 }

@@ -1,0 +1,17 @@
+/* typing-text.component.css */
+.typing-container {
+  display: inline-block;
+  font-family: monospace;
+  border: solid 2px #171717;
+  padding: 5px;
+  text-align: left;
+  color: #00fd00;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  margin-bottom: -5px;
+  background-color: #03ff00;
+}
