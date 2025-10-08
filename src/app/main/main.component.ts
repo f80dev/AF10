@@ -12,10 +12,8 @@ import {FxkeyboardComponent} from '../fxkeyboard/fxkeyboard.component';
   selector: 'app-main',
   imports: [
     SectionComponent,
-    ReverseblocComponent,
     NgIf,
     NgForOf,
-    ProductComponent,
     MatIcon,
     FxkeyboardComponent
   ],
@@ -65,8 +63,20 @@ export class MainComponent implements OnInit {
     }
   ]
 
-
   products: any[] = [
+    {
+      id: "is",
+      title: "Tutomatic",
+      version: "1.0",
+      description: "Automatiser la réalisation de tutoriels pour vos applications web ",
+      visual: "https://",
+      icon: "./tuto_icon.png",
+      link: "",
+      support: ""
+    }
+]
+
+  products_web3: any[] = [
     {
       id: "is",
       title: "Image Scraper",

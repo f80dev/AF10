@@ -24,8 +24,19 @@
   </div>
 
   <app-section title="Réalisations" *ngIf="!sel_product">
-    <br><br><br>
+
+    <h3>Python</h3>
     <div *ngFor="let prod of products" class="zone-product" (click)="open_product(prod)">
+      <img [src]="prod.icon" class="img-icon" [title]="prod.description"
+           (touchstart)="show_popup(prod,$event)" (touchend)="hide_popup()"
+           (mouseenter)="show_popup(prod,$event)" (mouseleave)="hide_popup()">
+      <br><br>
+      {{prod.title}}
+    </div>
+
+    <br><br><br><br>
+    <h3>Block-chaine / Web3</h3>
+    <div *ngFor="let prod of products_web3" class="zone-product" (click)="open_product(prod)">
       <img [src]="prod.icon" class="img-icon" [title]="prod.description"
            (touchstart)="show_popup(prod,$event)" (touchend)="hide_popup()"
            (mouseenter)="show_popup(prod,$event)" (mouseleave)="hide_popup()">
