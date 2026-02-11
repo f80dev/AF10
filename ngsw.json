@@ -1,0 +1,113 @@
+{
+  "configVersion": 1,
+  "timestamp": 1770834189807,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/index.html",
+        "/main-BMQWJHGO.js",
+        "/manifest.webmanifest",
+        "/polyfills-FFHMD2TL.js",
+        "/styles-WYNKJORG.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/cercle.png",
+        "/cercle.webp",
+        "/cnsmdp.jpg",
+        "/disquette.png",
+        "/favicon.png",
+        "/handclick.png",
+        "/icon__g8_128.png",
+        "/icons/icon-128x128.png",
+        "/icons/icon-144x144.png",
+        "/icons/icon-152x152.png",
+        "/icons/icon-192x192.png",
+        "/icons/icon-384x384.png",
+        "/icons/icon-512x512.png",
+        "/icons/icon-72x72.png",
+        "/icons/icon-96x96.png",
+        "/logo.png",
+        "/logo_icon.png",
+        "/logo_noir.png",
+        "/logo_vert.png",
+        "/nftnow_icon_128.png",
+        "/pacman.png",
+        "/pacman_blue.png",
+        "/pacman_orange.png",
+        "/pacman_pink.png",
+        "/pacman_red.png",
+        "/tuto_icon.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/cercle.png": "10eaeae670af031659f72fef46acee64ffce5c59",
+    "/cercle.webp": "dc00364d2ac68dd54c682a24037549fe3c8ad4a4",
+    "/cnsmdp.jpg": "863c6a124a89e44f07807a2f19cbb8ce5b29cef8",
+    "/disquette.png": "57d829335b2187bdf7172670bc2d31f59fc9cf87",
+    "/favicon.png": "a921c6f9bf7bda85746136d9354af2b71c946a4f",
+    "/handclick.png": "ca8ae815be20a23f12f75e31873a57cb1b3e98c3",
+    "/icon__g8_128.png": "8bccbfafcde71885cafbec1c74a9a0e23d888404",
+    "/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/index.html": "31fe513f97ed3d4ac9cb5efacfa6e229c6a97b86",
+    "/logo.png": "091431704156a53192e5ee102ad9ca024de6503a",
+    "/logo_icon.png": "a921c6f9bf7bda85746136d9354af2b71c946a4f",
+    "/logo_noir.png": "047100563a109fe2d0c0363a469f015c6fa75239",
+    "/logo_vert.png": "85fc3297c4686a19f6a8a656cf41c17a42592290",
+    "/main-BMQWJHGO.js": "fd5984b2e79c54ebe1b7e0494b18ac7f6b1d6579",
+    "/manifest.webmanifest": "11c2141e684d13c597ba9af779420243d0107d8b",
+    "/nftnow_icon_128.png": "1f659b54ce26485cac37cdaf556835219ec1fc77",
+    "/pacman.png": "153a0c9d8679fae88bbfd16544f21e5d30f922af",
+    "/pacman_blue.png": "985a101b2af1598d652f953cf4184e3dfcd4e3c3",
+    "/pacman_orange.png": "c8ebe8b06aeeb809d8e5f5e904014dc6f6cda9a9",
+    "/pacman_pink.png": "1383286e797da081971029a3c12f75e8b10ca2d6",
+    "/pacman_red.png": "c03b3f3d764c012589e96ce9285742221bcbf95f",
+    "/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/styles-WYNKJORG.css": "bacc716feb8e6e2221fd5b2f441453d166302e8b",
+    "/tuto_icon.png": "b987b9b703c651d71db2302055ed028975697945"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
